@@ -1,0 +1,20 @@
+{
+  "name": "a1-test",
+  "version": "1.0.0",
+  "description": "test html files in one line",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "node test/index"
+  },
+  "keywords": [
+    "test",
+    "chrome",
+    "browser"
+  ],
+  "author": "Angel Rego",
+  "license": "MIT",
+  "dependencies": {
+    "chrome-launcher": "^0.3.1",
+    "chrome-remote-interface": "^0.24.0"
+  }
+}
