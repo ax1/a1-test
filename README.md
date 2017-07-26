@@ -9,26 +9,30 @@ The test will take a folder of html pages as input and it will run a headless ch
 The test can also check external urls, use the depth parameter to browse around related pages.
 For devs: use https://developers.google.com/web/updates/2017/04/headless-chrome as reference
 
+To test all the html files in a local folder:
+
 ```javascript
-
-// check all the html pages in a local FOLDER
+const test = require('a1-test')
 try {
-  // folder containing the html pages
-  const folder = '/home/steven/myApp'
-  // normal usage
-  await test.testHtmlFolder(folder)
-  // for special cases, set the chrome executable path
-  await  test.testHtmlFolder(folder, '/usr/lib/chromium-browser/chromium-browser')
-  assert.ok(true,'tests passed')
-} catch (e) {
-  assert.fail(e.toString())
-}
-
-// check a valid URL (local or external)
-try {
-  await test.testHtmlUrl('http://google.com', '/usr/lib/chromium-browser/chromium-browser',1)
+  const folder = '/home/steven/myApp' // index.html, landing.html, details/index.html ...  
+  await test.folder(folder) // also test.folder(folder, '/usr/lib/chromium-browser/chromium-browser')
   assert.ok(true,'tests passed')
 } catch (e) {
   assert.fail(e.toString())
 }
 ```
+To test url and related pages, use the  `testHtmlUrl`. The test will look for related <a> tags, so use a depth parameter to limit the pages to test.
+```javascript
+const test = require('a1-test')
+try {
+  await test.url('http://google.com', '/usr/lib/chromium-browser/chromium-browser',1)
+  assert.ok(true,'tests passed')
+} catch (e) {
+  assert.fail(e.toString())
+}
+```
+For devs:
+
+Fork the github project and customize by following these links:
+- https://developers.google.com/web/updates/2017/04/headless-chrome
+- https://chromedevtools.github.io/devtools-protocol/
