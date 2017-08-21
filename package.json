@@ -11,14 +11,14 @@
     "chrome",
     "browser"
   ],
-  "author": "Angel Rego",
+  "author": "ax1",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/angelrego/a1-test.git"
+    "url": "https://github.com/ax1/a1-test.git"
   },
   "bugs": {
-    "url": "https://github.com/angelrego/a1-test/issues"
+    "url": "https://github.com/ax1/a1-test/issues"
   },
   "dependencies": {
     "chrome-launcher": "^0.3.1",
