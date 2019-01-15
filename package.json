@@ -1,6 +1,6 @@
 {
   "name": "a1-test",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "test html files in one line",
   "main": "lib/index.js",
   "scripts": {
